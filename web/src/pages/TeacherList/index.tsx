@@ -1,5 +1,6 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader";
+import TeacherItem from "../../components/TeacherItem";
 
 import './styles.css';
 
@@ -26,21 +27,7 @@ function TeacherList () {
            </PageHeader>
 
            <main>
-               <article className="teacher-item">
-                   <header>
-                       <img src="https://i.pinimg.com/736x/1f/96/85/1f96858f82fba63d1179e82476a36d9d.jpg" alt="Menina Rosa" />
-                       <div>
-                           <strong>Menina Rosa</strong>
-                           <span>Idiomas</span>
-                       </div>
-                   </header>
-
-                   <p>
-                       Entusiasta da smelhores tecnologias de química avançada.
-                       <br /><br />
-                       Apaixonado por explodir coisas em laboratórios por mudar a vida das pessoas através de experiências. Mais 200000 pessoas já passaram por uma das minhas explosões
-                   </p>
-               </article>
+               <TeacherItem />
            </main>
         </div>
     );
