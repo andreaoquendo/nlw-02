@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import { useNavigate} from 'react-router-dom';
 import Input from "../../components/Input";
 
 import PageHeader from '../../components/PageHeader';
@@ -10,6 +11,8 @@ import Select from "../../components/Select";
 import api from "../../services/api";
 
 function TeacherForm () {
+
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
@@ -41,6 +44,7 @@ function TeacherForm () {
             schedule: scheduleItems
         }).then(()=>{
             alert('Cadasto realizado!');
+            navigate('/');
         }).catch(()=>{
             alert('Erro no cadastro!');
         })
@@ -59,7 +63,7 @@ function TeacherForm () {
         console.log(updatedScheduleItems);
 
         // perguntar sobre este erro
-        //setScheduleItems(updatedScheduleItems);
+        setScheduleItems(updatedScheduleItems);
     }
 
     return (
